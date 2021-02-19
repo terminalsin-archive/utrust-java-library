@@ -44,6 +44,41 @@ public void order1Test() {
 }
 ```
 
+## Integration
+Using maven:
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+     <groupId>com.github.terminalsin</groupId>
+     <artifactId>utrust-java-library</artifactId>
+     <version>1.0.0</version>
+</dependency>
+```
+
+Using gradle:
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+// Build stuff...
+  
+dependencies {
+    implementation 'com.github.terminalsin:utrust-java-library:Tag'
+}
+
+```
+
 ## Todo
 - [x] Stores API
 - [x] Basic order system
