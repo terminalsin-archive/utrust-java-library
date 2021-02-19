@@ -44,6 +44,12 @@ public void order1Test() {
 }
 ```
 
+## Todo
+- [x] Stores API
+- [x] Basic order system
+- [ ] Merchants API
+- [ ] Remove GSON?
+
 ## Dependencies
 Google GSON: https://github.com/google/gson (Shaded)
 
