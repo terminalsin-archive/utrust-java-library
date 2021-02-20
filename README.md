@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="10%" height="10%" src="https://jumpseller.co.uk/images/support/utrust/logoutrust.png">
+  <img width="30%" height="30%" src="https://miro.medium.com/max/2260/1*ONEziBaPiLUTDdbQraoaQg.png">
   <br>
   <a href="https://github.com/terminalsin/utrust-java-library/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/terminalsin/utrust-java-library"></a>
   <a href="https://github.com/terminalsin/utrust-java-library/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/terminalsin/utrust-java-library"></a>
