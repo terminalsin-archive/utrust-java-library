@@ -1,6 +1,10 @@
-package com.utrust.api.model;
+package com.utrust.api.model.store;
 
 import com.google.gson.annotations.SerializedName;
+import com.utrust.api.model.Amount;
+import com.utrust.api.model.Customer;
+import com.utrust.api.model.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,40 +62,16 @@ public class OrderRequest {
         private String callbackUrl = "";
     }
 
-    static class Customer {
-        @SerializedName("first_name")
-        private String firstName;
-
-        @SerializedName("last_name")
-        private String lastName;
-
-        @SerializedName("email")
-        private String email;
-
-        @SerializedName("country")
-        private String country;
-    }
-
-    static class Amount {
-        @SerializedName("total")
-        protected String total;
-
-        @SerializedName("currency")
-        protected String currency;
-
-    }
-
-
     public void setReference(String reference) {
         this.data.attributes.order.reference = reference;
     }
 
     public void setTotal(String total) {
-        this.data.attributes.order.amount.total = total;
+        this.data.attributes.order.amount.setTotal(total);
     }
 
     public void setCurrency(String currency) {
-        this.data.attributes.order.amount.currency = currency;
+        this.data.attributes.order.amount.setCurrency(currency);
     }
 
     public void setReturnUrl(String returnUrl) {
@@ -107,19 +87,19 @@ public class OrderRequest {
     }
 
     public void setEmail(String email) {
-        this.data.attributes.customer.email = email;
+        this.data.attributes.customer.setEmail(email);
     }
 
     public void setFirstName(String firstName) {
-        this.data.attributes.customer.firstName = firstName;
+        this.data.attributes.customer.setFirstName(firstName);
     }
 
     public void setLastName(String lastName) {
-        this.data.attributes.customer.lastName = lastName;
+        this.data.attributes.customer.setLastName(lastName);
     }
 
     public void setCountry(String country) {
-        this.data.attributes.customer.country = country;
+        this.data.attributes.customer.setCountry(country);
     }
 
     public void addItem(Item item) {
@@ -127,54 +107,7 @@ public class OrderRequest {
     }
 
 
-    public static class Item {
-        @SerializedName("sku")
-        private String sku;
 
-        @SerializedName("name")
-        private String name;
-
-        @SerializedName("price")
-        private String price;
-
-        @SerializedName("currency")
-        private String currency;
-
-        @SerializedName("quantity")
-        private int quantity;
-
-        public Item(String sku, String name, String price, String currency, int quantity) {
-            this.sku = sku;
-            this.name = name;
-            this.price = price;
-            this.currency = currency;
-            this.quantity = quantity;
-        }
-
-        public Item() {
-            this(null, null, null, null, 0);
-        }
-
-        public void setSku(String sku) {
-            this.sku = sku;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public void setPrice(String price) {
-            this.price = price;
-        }
-
-        public void setCurrency(String currency) {
-            this.currency = currency;
-        }
-
-        public void setQuantity(int quantity) {
-            this.quantity = quantity;
-        }
-    }
 
 
 }

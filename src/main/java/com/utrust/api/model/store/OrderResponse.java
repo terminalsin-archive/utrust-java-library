@@ -1,4 +1,4 @@
-package com.utrust.api.model;
+package com.utrust.api.model.store;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -25,6 +25,15 @@ public class OrderResponse {
     static class Attributes {
         @SerializedName("redirect_url")
         protected String redirectUrl;
+    }
+
+    static class Amount {
+        @SerializedName("total")
+        protected String total;
+
+        @SerializedName("currency")
+        protected String currency;
+
     }
 
     public String getType() {

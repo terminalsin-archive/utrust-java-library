@@ -1,16 +1,20 @@
-package com.utrust.api.model;
-
-import com.google.gson.annotations.SerializedName;
+package com.utrust.api.model.merchant;
 
 public class OrderDetailsRequest {
-    @SerializedName("order_id")
     private String orderId;
 
-    @SerializedName("include")
-    private String include;
-
-    public OrderDetailsRequest(String orderId, String include) {
+    public OrderDetailsRequest(String orderId) {
         this.orderId = orderId;
-        this.include = include;
+    }
+
+    public OrderDetailsRequest() {
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 }
