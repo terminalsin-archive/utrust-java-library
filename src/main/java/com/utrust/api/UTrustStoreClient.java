@@ -1,8 +1,8 @@
 package com.utrust.api;
 
 import com.google.gson.Gson;
-import com.utrust.api.model.OrderRequest;
-import com.utrust.api.model.OrderResponse;
+import com.utrust.api.model.store.OrderRequest;
+import com.utrust.api.model.store.OrderResponse;
 import com.utrust.api.util.Request;
 import com.utrust.api.util.Response;
 

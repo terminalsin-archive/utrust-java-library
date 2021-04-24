@@ -1,8 +1,9 @@
 package com.utrust.test;
 
 import com.utrust.api.UTrustStoreClient;
-import com.utrust.api.model.OrderRequest;
-import com.utrust.api.model.OrderResponse;
+import com.utrust.api.model.Item;
+import com.utrust.api.model.store.OrderRequest;
+import com.utrust.api.model.store.OrderResponse;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
@@ -28,7 +29,7 @@ public class SandboxStoreTest {
         order.setReturnUrl("google.com");
         order.setTotal("20.00");
 
-        final OrderRequest.Item item = new OrderRequest.Item();
+        final Item item = new Item();
         item.setSku("test1");
         item.setName("Test!");
         item.setCurrency("EUR");
