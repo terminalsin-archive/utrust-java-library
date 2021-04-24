@@ -59,6 +59,12 @@ public class OrderRequest {
     }
 
     static class Customer {
+        @SerializedName("first_name")
+        private String firstName;
+
+        @SerializedName("last_name")
+        private String lastName;
+
         @SerializedName("email")
         private String email;
 
@@ -104,6 +110,14 @@ public class OrderRequest {
         this.data.attributes.customer.email = email;
     }
 
+    public void setFirstName(String firstName) {
+        this.data.attributes.customer.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.data.attributes.customer.lastName = lastName;
+    }
+
     public void setCountry(String country) {
         this.data.attributes.customer.country = country;
     }
@@ -111,6 +125,7 @@ public class OrderRequest {
     public void addItem(Item item) {
         this.data.attributes.order.items.add(item);
     }
+
 
     public static class Item {
         @SerializedName("sku")
